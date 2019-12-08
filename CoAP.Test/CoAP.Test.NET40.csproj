@@ -63,12 +63,6 @@
     <Compile Include="StartStopTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CoAP.NET\CoAP.NET40.csproj">
-      <Project>{45DB1E45-4831-4E4A-BB1E-AE92EEA182E3}</Project>
-      <Name>CoAP.NET40</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

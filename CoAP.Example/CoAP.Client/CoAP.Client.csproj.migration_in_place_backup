@@ -5,20 +5,19 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B8D6E88E-890B-4220-B994-C5EC7B19D282}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{30223FF5-4DCB-45B8-9B06-61EB9FBF9FA8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CoAP.Proxy</RootNamespace>
-    <AssemblyName>CoAP.Proxy</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>CoAP.Examples</RootNamespace>
+    <AssemblyName>CoAPClient</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\NET40\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -26,35 +25,23 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\NET40\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\NET40\CoAP.Proxy.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Runtime.Remoting" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CoapTranslator.cs" />
-    <Compile Include="DirectProxyCoAPResolver.cs" />
-    <Compile Include="HttpStack.cs" />
-    <Compile Include="HttpTranslator.cs" />
-    <Compile Include="Http\IHttpRequest.cs" />
-    <Compile Include="Http\IHttpResponse.cs" />
-    <Compile Include="Http\IServiceProvider.cs" />
-    <Compile Include="Http\RemotingHttpRequest.cs" />
-    <Compile Include="Http\WebServer.cs" />
-    <Compile Include="ICacheResource.cs" />
-    <Compile Include="IProxyCoAPResolver.cs" />
+    <Compile Include="ExampleClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProxyHttpServer.cs" />
-    <Compile Include="Resources\ForwardingResource.cs" />
-    <Compile Include="Resources\ProxyCoapClientResource.cs" />
-    <Compile Include="Resources\ProxyHttpClientResource.cs" />
-    <Compile Include="Util\ThrowHelper.cs" />
-    <Compile Include="TranslationException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CoAP.NET\CoAP.NET.csproj">
+      <Project>{45DB1E45-4831-4E4A-BB1E-AE92EEA182E3}</Project>
+      <Name>CoAP.NET</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -3,6 +3,7 @@
 [Oo]bj/
 .svn
 Apps
+.vs
 
 # DNX project file with a complete list of resolved dependencies
 project.lock.json
